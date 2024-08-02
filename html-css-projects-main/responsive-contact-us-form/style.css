@@ -1,0 +1,109 @@
+:root {
+    --accent-color: #7b86ed;
+    --accent-font-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 75%;
+    box-shadow: 0.2rem 0.5rem 1rem #9193a4;
+    border-radius: 1rem;
+}
+
+.information-side {
+    flex-basis: 40%;
+    background-color: var(--accent-color);
+    border-radius: 1rem 0 0 1rem;
+    padding: 1rem;
+    color: var(--accent-font-color);
+    text-align: center;
+}
+
+.info-text, .info-header {
+    margin-top: 1rem;
+}
+
+.info-img {
+    max-width: 100%;
+}
+
+.form-side {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.form {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.input-field, .input-message {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background: #f1f1f1;
+    border: none;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+.input-message {
+    resize: none;
+}
+
+.btn-style {
+    padding: 0.8rem;
+    border: 0.1rem solid var(--accent-color);
+    border-radius: 0.3rem;
+    background: #fff;
+    color: var(--accent-color);
+}
+
+.btn-style:hover {
+    background: var(--accent-color);
+    color: var(--accent-font-color);
+    box-shadow: 0 0 0.5rem var(--accent-color);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .information-side {
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .info-img {
+        display: none;
+    }
+
+    .info-text {
+        margin-bottom: 1rem;
+    }
+
+    .input-field, .input-message {
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        margin: auto;
+    }
+}
